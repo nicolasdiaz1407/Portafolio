@@ -1,0 +1,95 @@
+.cont-contacto{
+  width: 100%;
+  background-color: #f5f2f0;
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.cont-contacto.dark{
+  background-color: rgb(80, 80, 79);
+}
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Inicialmente establece la opacidad en 0 para ocultar las esferas */
+  transform: translateY(70px); /* Inicialmente desplaza las esferas hacia abajo */
+  transition: opacity 0.8s, transform 0.8s;
+}
+.contact-container.dark {
+  background-color: rgb(194, 189, 189);
+}
+.contact-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+h2 {
+  text-align: center;
+  color: #3498db;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  transition: border-bottom 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 2px solid #3498db;
+  outline: none;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  padding: 0 15px;
+  margin-top: 20px;
+  margin: 20px auto 0; 
+  border-radius: 30px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: 2px solid transparent;
+  border-top-color: rgb(9, 255, 0);
+  border-left-color: rgb(9, 255, 0);
+  background-color: rgba(9, 255, 0, 0.1); /* Cambia el color de fondo al pasar el ratón */
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.8s;
+}
+button:hover {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: rgb(9, 255, 0);
+  border-right-color: rgb(9, 255, 0);
+  background-color: rgba(9, 255, 0, 0.1); /* Cambia el color de fondo al pasar el ratón */
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px){
+  .contact-container {
+    max-width: 90%;
+  }
+}

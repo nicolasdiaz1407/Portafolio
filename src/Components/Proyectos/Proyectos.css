@@ -1,0 +1,80 @@
+/* Estilos para .proyectos */
+.proyectos {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 242, 240);
+    padding-top: 60px;
+  }
+  .proyectos.dark{
+    background-color: rgb(80, 80, 79);
+  }
+  .proyectos h2 {
+    margin-bottom: 40px;
+    border-bottom: 2px solid rgb(9, 255, 0);
+  }
+  
+  .proyectos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .proyecto {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #c3d1df;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(70px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  .proyecto.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .proyecto:hover {
+    transform: scale(1.05);
+  }
+  
+  .proyecto-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .proyecto-info p {
+    margin-top: 10px;
+  }
+  
+  .iconos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .iconos a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    .proyectos {
+      padding-top: 20px;
+    }
+    .proyecto {
+      width: 90%;
+    }
+  }
+  

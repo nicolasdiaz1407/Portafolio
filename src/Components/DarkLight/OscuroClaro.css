@@ -1,0 +1,9 @@
+/* DarkLight/OscuroClaro.css */
+.oscuro-claro-container {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}

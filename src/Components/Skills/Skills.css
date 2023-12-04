@@ -1,0 +1,93 @@
+.cont-esferas{
+  width: 100%;
+  margin: 0;
+  background-color: rgb(245, 242, 240);
+  padding-top: 30px;
+}
+.cont-esferas.dark{
+  background-color: rgb(80, 80, 79);
+}
+.esferas {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60%;
+}
+
+.esferas h2 {
+  margin-bottom: 40px;
+  border-bottom: 2px solid rgb(9, 255, 0);
+}
+
+.esferas2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+  margin-top: 20px; /* Ajusta el espacio entre .esferas y .esferas2 según sea necesario */
+  opacity: 0; /* Inicialmente establece la opacidad en 0 para ocultar las esferas */
+  transform: translateY(70px); /* Inicialmente desplaza las esferas hacia abajo */
+  transition: opacity 0.8s, transform 0.8s;
+}
+.esferas2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.esfera {
+  width: 80px;
+  height: 80px;
+  background-color: #c3d1df;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 10px; /* Ajusta el espacio horizontal entre las esferas */
+  border: 1px solid transparent;
+  transition: background-color 0.8s, border 0.8s;
+}
+
+.esfera:hover {
+  border: 1px solid rgb(9, 255, 0);
+  background-color: rgba(9, 255, 0, 0.1); /* Cambia el color de fondo al pasar el ratón */
+}
+.esfera p {
+  color: #000000;
+  font-size: 13px;
+  margin: 0;
+  transition: transform 0.8s;
+}
+.esfera:hover p{
+  transform: scale(1.3);
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .cont-esferas{
+    padding-top: 80px;
+  }
+  .esferas {
+    margin-top: 210%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .esferas2 {
+    flex-wrap: wrap; /* Añade esta línea para permitir que las esferas se envuelvan en dispositivos móviles */
+    margin-top: 20px; /* Ajusta el espacio entre .esferas y .esferas2 según sea necesario */
+  }
+
+  .esfera {
+    margin-bottom: 20px;
+    margin: 10px; /* Elimina el margen lateral en dispositivos móviles */
+  }
+}
